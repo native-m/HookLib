@@ -25,19 +25,19 @@ BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD fdwReason, LPVOID lpReserved)
   {
   case DLL_PROCESS_ATTACH:
     // Initialize HookLib
-	  HookLib::Initialize();
-	  Main();
-	  break;
+    HookLib::Initialize();
+    Main();
+    break;
   case DLL_THREAD_ATTACH:
-	  break;
+    break;
   case DLL_PROCESS_DETACH:
     // If you're done using HookLib, then...
-	  HookLib::Shutdown();
-	  break;
+    HookLib::Shutdown();
+    break;
   case DLL_THREAD_DETACH:
-	  break;
+    break;
   default:
-	  break;
+    break;
   }
 }
 ```
